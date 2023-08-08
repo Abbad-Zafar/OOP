@@ -15,6 +15,12 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amt)
 
+    def __repr__(self): ## Representation of class of how objects are printed or displayed
+        return "Employee('{}','{}',{})".format(self.first,self.last,self.pay)
+
+    def __str__(self): ## Representation of class of how objects are printed or displayed
+        return '{}'.format(self.fullname())
+
     
     @classmethod ## Class as first argument # Engage directly with class variables
     def set_raise_amt(cls, amount):
@@ -59,7 +65,9 @@ print(Dev_2.fullname())
 print(Dev_2.prog_lang)
 
 
+print(emp_1)
 
+print(str(emp_1))
 
 
 
